@@ -157,26 +157,33 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Audio.cs">
-      <DependentUpon>QuanLyAudioModel.tt</DependentUpon>
+      <DependentUpon>QuanLyAudio.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLyAudioModel.Context.cs">
+    <Compile Include="Models\QuanLyAudio.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyAudioModel.Context.tt</DependentUpon>
+      <DependentUpon>QuanLyAudio.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLyAudioModel.cs">
+    <Compile Include="Models\QuanLyAudio.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyAudioModel.tt</DependentUpon>
+      <DependentUpon>QuanLyAudio.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\QuanLyAudioModel.Designer.cs">
+    <Compile Include="Models\QuanLyAudio.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>QuanLyAudioModel.edmx</DependentUpon>
+      <DependentUpon>QuanLyAudio.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagram.cs">
+      <DependentUpon>QuanLyAudio.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Database1.mdf" />
+    <Content Include="App_Data\Database1_log.ldf">
+      <DependentUpon>Database1.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\NguoiDungCssLayout\pageChiTiet.css" />
@@ -207,27 +214,27 @@
     <Content Include="Images\scriptbg4.png" />
     <Content Include="Images\title-2011-06.png" />
     <Content Include="Images\youtube-play.png" />
-    <Content Include="Models\QuanLyAudioModel.Context.tt">
+    <Content Include="Models\QuanLyAudio.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyAudioModel.edmx</DependentUpon>
-      <LastGenOutput>QuanLyAudioModel.Context.cs</LastGenOutput>
+      <DependentUpon>QuanLyAudio.edmx</DependentUpon>
+      <LastGenOutput>QuanLyAudio.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\QuanLyAudioModel.tt">
+    <Content Include="Models\QuanLyAudio.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>QuanLyAudioModel.edmx</DependentUpon>
-      <LastGenOutput>QuanLyAudioModel.cs</LastGenOutput>
+      <DependentUpon>QuanLyAudio.edmx</DependentUpon>
+      <LastGenOutput>QuanLyAudio.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <EntityDeploy Include="Models\QuanLyAudioModel.edmx">
+    <EntityDeploy Include="Models\QuanLyAudio.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>QuanLyAudioModel.Designer.cs</LastGenOutput>
+      <LastGenOutput>QuanLyAudio.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\QuanLyAudioModel.edmx.diagram">
-      <DependentUpon>QuanLyAudioModel.edmx</DependentUpon>
+    <Content Include="Models\QuanLyAudio.edmx.diagram">
+      <DependentUpon>QuanLyAudio.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -239,6 +246,7 @@
     <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\NguoiDungJs\diff.js" />
+    <Content Include="Scripts\NguoiDungJs\test.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Web.config" />
@@ -261,7 +269,6 @@
     <Content Include="Views\Levels\Levels.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Audio\" />
   </ItemGroup>
   <ItemGroup>

@@ -17,7 +17,7 @@ namespace ListenAndWrite.Models
         public int id { get; set; }
         public string NameAudio { get; set; }
         public string Text { get; set; }
-        public int LevelAudio { get; set; }
+        public Nullable<int> LevelAudio { get; set; }
         public string name { get; set; }
     }
 }

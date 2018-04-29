@@ -61,7 +61,7 @@
                                     <tr>
                                         <td></td>
                                         <td>
-                                            <input id="text" type="text" name="text" value="i have a apple" style="border: none;">
+                                            <input id="text" type="text" name="text" value="@Model.Text" style="border: none;">
                                             <br>
                                             <textarea cols="38" rows="1" id="answer" onkeyup="check(1, 1)" style=""></textarea>
                                         </td>
@@ -87,6 +87,7 @@
     </div>
 </div>
 <script>
+    var x = 0;
     var music = document.getElementById('music'); 
     var duration = music.duration;
     var pButton = document.getElementById('pButton'); 
@@ -96,6 +97,7 @@
 
     var timelineWidth = timeline.offsetWidth - playhead.offsetWidth;
 
+    pButton.addEventListener("click", tinhDiem);
     pButton.addEventListener("click", play);
     stop.addEventListener("click", pause);
 
@@ -119,6 +121,19 @@
         }
     }
 
+
+    //tnh diem nghe theo thoi gian
+    function tinhDiem() {       
+            x++;
+            var y = setTimeout(tinhDiem, 1000);
+            if (document.getElementById('answer').value == $('#text').val()) {
+                alert(x);
+                clearTimeout(y);
+            
+        }
+    }
+    
+
     //Play and Pause
     function play() {
         music.play();
@@ -138,7 +153,7 @@
     function getPosition(el) {
         return el.getBoundingClientRect().left;
     }
-
+   
     document.getElementById('answer').onkeyup = function () {
         try {
             var K = this.value.toString();
@@ -172,5 +187,6 @@
             document.getElementById("demo").innerHTML =
                 err.name + "<br>" + err.message;
         }
+       
     }
 </script>
